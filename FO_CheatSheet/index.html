@@ -193,6 +193,97 @@
     </table>
     <p>Les fibres monomodes sont utilisées pour de longues distances et les fibres multimodes pour des distances plus courtes à haut débit dans des environnements compacts.</p>
 
+    <h2>🔬 Comparatif des fibres OMx et OSx</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type de Fibre</th>
+                <th>Diamètre Cœur/Gaine (µm)</th>
+                <th>Type</th>
+                <th>Couleur Gaine Standard</th>
+                <th>Source Lumineuse</th>
+                <th>Bande Passante (MHz*km)</th>
+                <th>Applications Typiques / Débits Supportés</th>
+                <th>Distance Max Typique</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OM1</td>
+                <td>62.5/125</td>
+                <td>Multimode</td>
+                <td>Orange</td>
+                <td>LED</td>
+                <td>200 @850nm</td>
+                <td>100MbE, 1GbE</td>
+                <td>1GbE jusqu\'à 275m, 10GbE jusqu\'à 33m</td>
+            </tr>
+            <tr>
+                <td>OM2</td>
+                <td>50/125</td>
+                <td>Multimode</td>
+                <td>Orange</td>
+                <td>LED</td>
+                <td>500 @850nm</td>
+                <td>1GbE</td>
+                <td>1GbE jusqu\'à 550m, 10GbE jusqu\'à 82m</td>
+            </tr>
+            <tr>
+                <td>OM3</td>
+                <td>50/125</td>
+                <td>Multimode (Optimisé Laser)</td>
+                <td>Aqua</td>
+                <td>VCSEL</td>
+                <td>2000 @850nm (EMB)</td>
+                <td>10GbE, 40GbE, 100GbE</td>
+                <td>10GbE jusqu\'à 300m, 40/100GbE jusqu\'à 100m</td>
+            </tr>
+            <tr>
+                <td>OM4</td>
+                <td>50/125</td>
+                <td>Multimode (Optimisé Laser)</td>
+                <td>Aqua (ou Violet Erika)</td>
+                <td>VCSEL</td>
+                <td>4700 @850nm (EMB)</td>
+                <td>10GbE, 40GbE, 100GbE</td>
+                <td>10GbE jusqu\'à 400m (parfois 550m), 40/100GbE jusqu\'à 150m</td>
+            </tr>
+            <tr>
+                <td>OM5</td>
+                <td>50/125</td>
+                <td>Multimode (Wideband)</td>
+                <td>Vert Citron</td>
+                <td>VCSEL (SWDM)</td>
+                <td>4700 @850nm et 2470 @953nm (EMB)</td>
+                <td>40GbE, 100GbE (SWDM)</td>
+                <td>Similaire à OM4 pour 850nm; supporte multiplexage en longueur d\'onde (SWDM)</td>
+            </tr>
+            <tr>
+                <td>OS1</td>
+                <td>9/125</td>
+                <td>Monomode</td>
+                <td>Jaune</td>
+                <td>Laser</td>
+                <td>N/A (Très élevée)</td>
+                <td>Réseaux longue distance, intérieur</td>
+                <td>Typiquement jusqu\'à 10km (dépendant de l\'atténuation)</td>
+            </tr>
+            <tr>
+                <td>OS2</td>
+                <td>9/125</td>
+                <td>Monomode</td>
+                <td>Jaune</td>
+                <td>Laser</td>
+                <td>N/A (Très élevée)</td>
+                <td>Réseaux très longue distance, extérieur, FTTH</td>
+                <td>Jusqu\'à 200km (avec équipements adaptés)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>EMB:</strong> Effective Modal Bandwidth (Bande Passante Modale Effective), mesure clé pour les fibres multimodes optimisées laser (OM3, OM4, OM5) utilisant des sources VCSEL.</p>
+    <p><strong>SWDM:</strong> Short Wavelength Division Multiplexing, permet de transmettre plusieurs signaux sur différentes longueurs d\'onde sur une seule fibre.</p>
+    <p>Le choix de la fibre dépendra fortement de la distance à couvrir, du débit requis et du budget. Les fibres OS2 sont conçues pour les plus longues distances et les environnements extérieurs grâce à leur construction et leur faible atténuation, tandis que les fibres OMx sont utilisées pour des distances plus courtes dans les datacenters et les réseaux locaux.</p>
+
     <h2>🎯 4. Finitions de connecteurs : UPC vs APC</h2>
     <table>
         <thead>
