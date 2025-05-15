@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation sur les connecteurs de fibre optique</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0; /* Remove default margin */
+            padding: 0;
+            background-color: #f4f4f4; /* Add a light background to the body */
+        }
+        .card {
+            width: 80%;
+            margin: 40px auto; /* Center the card and add top/bottom margin */
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+            border-bottom: 1px solid #eee; /* Add subtle separators */
+            padding-bottom: 5px;
+            margin-top: 1.5em; /* Add space above headings */
+        }
+        h1 {
+            text-align: center; /* Center the main title */
+            border-bottom: none; /* Remove border for main title */
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-top: 15px; /* Add space above tables */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px; /* Increase padding */
+            text-align: left;
+            vertical-align: middle; /* Align content vertically */
+        }
+        th {
+            background-color: #e9e9e9; /* Slightly darker header */
+        }
+        tr:nth-child(even) {background-color: #f9f9f9;} /* Add zebra striping */
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px; /* Add padding to lists */
+        }
+        li {
+            margin-bottom: 8px; /* Increase spacing */
+        }
+        .code {
+            font-family: monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .note {
+            color: #d9534f; /* Softer red color */
+            font-weight: bold;
+            background-color: #fcf8e3; /* Light yellow background for note */
+            border: 1px solid #faebcc;
+            padding: 10px;
+            border-radius: 4px;
+            display: block; /* Make it block level */
+            margin-top: 10px;
+        }
+        img.connector-img, img.fiber-img, img.finish-img {
+            max-width: 60px; /* Limit image size */
+            height: auto;
+            display: block; /* Center image or control layout */
+            margin: 5px auto; /* Center image in cell */
+        }
+        img.general-illustration {
+            display: block;
+            margin: 15px auto; /* Center the image */
+            max-width: 80%;    /* Limit width */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card"> <!-- Card container -->
+
+    <h1>📘 Documentation sur les connecteurs de fibre optique</h1>
+
+    <h2>🔌 1. Types de connecteurs</h2>
+    <img src="images/connectors_FC_SC_ST_LC.png" alt="Types de connecteurs fibre optique" class="general-illustration">
+    <table>
+        <thead>
+            <tr>
+                <th>Connecteur</th>
+                <th>Description</th>
+                <th>Format</th>
+                <th>Usage typique</th>
+                <th>Verrouillage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SC (Subscriber Connector)</td>
+                <td>Carré, facile à insérer, très courant</td>
+                <td>Simplex ou Duplex</td>
+                <td>Réseaux FTTH, réseaux LAN, équipements actifs</td>
+                <td>Mécanisme de verrouillage par encliquetage</td>
+            </tr>
+            <tr>
+                <td>LC (Lucent Connector)</td>
+                <td>Petit format, haute densité</td>
+                <td>Simplex ou Duplex</td>
+                <td>Datacenters, équipements actifs, haute densité de ports</td>
+                <td>Clip à verrouillage</td>
+            </tr>
+            <tr>
+                <td>FC (Ferrule Connector)</td>
+                <td>Cylindrique, ancien standard</td>
+                <td>Principalement simplex</td>
+                <td>Réseaux télécoms longue distance</td>
+                <td>Filetage à vis</td>
+            </tr>
+            <tr>
+                <td>ST (Straight Tip)</td>
+                <td>Cylindrique à baïonnette</td>
+                <td>Principalement simplex</td>
+                <td>Réseaux campus, infrastructures anciennes</td>
+                <td>Système à baïonnette</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>🔁 2. Simplex vs Duplex</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type de câble</th>
+                <th>Description</th>
+                <th>Usages</th>
+                <th>Distance max typique</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Simplex</td>
+                <td>Une fibre, une direction</td>
+                <td>Capteurs, transmissions unidirectionnelles</td>
+                <td>Dépend du type de fibre</td>
+            </tr>
+            <tr>
+                <td>Duplex</td>
+                <td>Deux fibres, bidirectionnelle</td>
+                <td>Réseaux LAN, Internet, communications full-duplex</td>
+                <td>Dépend du type de fibre</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Le choix entre simplex et duplex dépend du besoin en communication bidirectionnelle.</p>
+    <p><strong>Note sur le Simplex Bidirectionnel :</strong> Bien que le simplex standard implique une communication unidirectionnelle sur une fibre, il est techniquement possible d'obtenir une communication bidirectionnelle sur une seule fibre. Ceci est réalisé grâce à des technologies comme le multiplexage en longueur d'onde (WDM - Wavelength Division Multiplexing). Avec le WDM, des signaux lumineux de différentes longueurs d'onde (couleurs) sont utilisés pour l'émission et la réception sur la même fibre, sans interférence. Cette approche, souvent appelée "BiDi" (Bidirectionnelle), est couramment utilisée dans les réseaux FTTH (Fiber To The Home) pour réduire les coûts en utilisant une seule fibre par abonné au lieu de deux.</p>
+    <p>Pour mettre en œuvre cette communication BiDi, des modules émetteurs-récepteurs spécifiques, appelés <strong>transceivers BiDi</strong>, sont nécessaires. Chaque transceiver BiDi est conçu pour émettre sur une longueur d'onde (par exemple, 1310 nm) et recevoir sur une autre (par exemple, 1550 nm). Ils doivent impérativement être utilisés en paires : un transceiver A émettant à 1310 nm et recevant à 1550 nm sera connecté à un transceiver B émettant à 1550 nm et recevant à 1310 nm via la même fibre optique. Ces transceivers utilisent généralement un seul port de connexion physique (comme un connecteur LC Simplex ou SC Simplex).</p>
+
+    <h2>🌈 3. Monomode vs Multimode</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type de fibre</th>
+                <th>Description</th>
+                <th>Couleur gaine</th>
+                <th>Usages</th>
+                <th>Distance max typique</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monomode (SMF)</td>
+                <td>Coeur très fin (9 µm), transmission d'un seul mode lumineux</td>
+                <td>Jaune</td>
+                <td>Réseaux longue distance, backbone, FTTH</td>
+                <td>Jusqu'à 40-100 km sans répéteur (avec équipements adaptés)</td>
+            </tr>
+            <tr>
+                <td>Multimode (MMF)</td>
+                <td>Coeur plus large (50 ou 62.5 µm), plusieurs modes lumineux</td>
+                <td>Orange (OM1/OM2), Aqua (OM3/OM4), Violet (OM5)</td>
+                <td>Réseaux locaux (LAN, datacenters)</td>
+                <td>Jusqu'à 2 km (OM1), 10-150 m (OM3/OM4 à 10-40 Gbps)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Les fibres monomodes sont utilisées pour de longues distances et les fibres multimodes pour des distances plus courtes à haut débit dans des environnements compacts.</p>
+
+    <h2>🎯 4. Finitions de connecteurs : UPC vs APC</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Polissage</th>
+                <th>Perte de retour</th>
+                <th>Couleur</th>
+                <th>Usages typiques</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>UPC (Ultra Physical Contact)</td>
+                <td>Surface plane arrondie</td>
+                <td>-50 à -55 dB</td>
+                <td>Bleu</td>
+                <td>Réseaux où le retour optique n'est pas critique (LAN, multimode)</td>
+            </tr>
+            <tr>
+                <td>APC (Angled Physical Contact)</td>
+                <td>Surface polie à 8°</td>
+                <td>-60 dB ou plus</td>
+                <td>Vert</td>
+                <td>Réseaux FTTH, RF, TV, où la réflexion doit être minimale</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="note">Ne jamais connecter un connecteur APC avec un UPC : incompatibilité physique et perte optique assurée.</p>
+
+    <h2>🧠 5. Recommandations et bonnes pratiques</h2>
+    <ul>
+        <li>🔄 Toujours jumeler le bon type de connecteurs (SC avec SC, APC avec APC, etc.).</li>
+        <li>📏 Vérifier les distances supportées selon la norme Ethernet (OM3 pour 10 GbE sur 300 m, par exemple).</li>
+        <li>💡 Nettoyage régulier des embouts recommandé, les connecteurs sales représentent une cause majeure de perte de signal.</li>
+        <li>🎛️ Utiliser des coupleurs adaptés (SC-SC, LC-LC, etc.) pour maintenir la compatibilité mécanique et optique.</li>
+        <li>📚 Normes associées : <span class="code">TIA/EIA-568</span>, <span class="code">ISO/IEC 11801</span>, <span class="code">ITU-T G.652</span> (fibre monomode).</li>
+    </ul>
+
+    <h2>📌 6. Synthèse par type de connecteur et cas d'usage</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Connecteur</th>
+                <th>Monomode</th>
+                <th>Multimode</th>
+                <th>Max distance</th>
+                <th>Usages recommandés</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SC</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Jusqu'à 40 km (SM) / 2 km (MM)</td>
+                <td>FTTH, datacenters</td>
+            </tr>
+            <tr>
+                <td>LC</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Idem SC</td>
+                <td>Haute densité, SFP</td>
+            </tr>
+            <tr>
+                <td>FC</td>
+                <td>✅</td>
+                <td>⚠️ Peu courant</td>
+                <td>Jusqu'à 100 km (SM)</td>
+                <td>Télécom, labo</td>
+            </tr>
+            <tr>
+                <td>ST</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Jusqu'à 2 km (MM)</td>
+                <td>Réseaux anciens, écoles</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div> <!-- End card container -->
+
+</body>
+</html> 
