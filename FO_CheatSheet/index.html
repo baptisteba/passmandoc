@@ -82,9 +82,30 @@
             max-width: 80%;    /* Limit width */
             height: auto;
         }
+        .page-header {
+            background-color: #2c3e50; /* Dark blue-grey background */
+            padding: 12px 20px;
+            text-align: center;
+            margin-bottom: 30px; /* Space below header */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+        .page-header a {
+            color: #ecf0f1; /* Light grey text */
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .page-header a:hover {
+            color: #ffffff; /* White on hover */
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+
+<div class="page-header">
+    <a href="../index.html">⬅️ Retour au Menu Principal</a>
+</div>
 
 <div class="card"> <!-- Card container -->
 
@@ -164,36 +185,6 @@
     <p>Pour mettre en œuvre cette communication BiDi, des modules émetteurs-récepteurs spécifiques, appelés <strong>transceivers BiDi</strong>, sont nécessaires. Chaque transceiver BiDi est conçu pour émettre sur une longueur d'onde (par exemple, 1310 nm) et recevoir sur une autre (par exemple, 1550 nm). Ils doivent impérativement être utilisés en paires : un transceiver A émettant à 1310 nm et recevant à 1550 nm sera connecté à un transceiver B émettant à 1550 nm et recevant à 1310 nm via la même fibre optique. Ces transceivers utilisent généralement un seul port de connexion physique (comme un connecteur LC Simplex ou SC Simplex).</p>
 
     <h2>🌈 3. Monomode vs Multimode</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Type de fibre</th>
-                <th>Description</th>
-                <th>Couleur gaine</th>
-                <th>Usages</th>
-                <th>Distance max typique</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Monomode (SMF)</td>
-                <td>Coeur très fin (9 µm), transmission d'un seul mode lumineux</td>
-                <td>Jaune</td>
-                <td>Réseaux longue distance, backbone, FTTH</td>
-                <td>Jusqu'à 40-100 km sans répéteur (avec équipements adaptés)</td>
-            </tr>
-            <tr>
-                <td>Multimode (MMF)</td>
-                <td>Coeur plus large (50 ou 62.5 µm), plusieurs modes lumineux</td>
-                <td>Orange (OM1/OM2), Aqua (OM3/OM4), Violet (OM5)</td>
-                <td>Réseaux locaux (LAN, datacenters)</td>
-                <td>Jusqu'à 2 km (OM1), 10-150 m (OM3/OM4 à 10-40 Gbps)</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>Les fibres monomodes sont utilisées pour de longues distances et les fibres multimodes pour des distances plus courtes à haut débit dans des environnements compacts.</p>
-
-    <h2>🔬 Comparatif des fibres OMx et OSx</h2>
     <table>
         <thead>
             <tr>
