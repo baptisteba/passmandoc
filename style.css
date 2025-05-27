@@ -23,9 +23,12 @@ body {
             background-color: rgb(22, 34, 114);
             color: white;
             padding: 1rem;
-            text-align: center;
             width: 100%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -183,4 +186,11 @@ tr:hover {
     border-top: 1px solid #eee;
     padding-top: 1rem;
     margin-top: 2rem;
+}
+
+.home-button-header {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 } 
