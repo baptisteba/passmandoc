@@ -22,7 +22,7 @@ body {
         header {
             background-color: rgb(22, 34, 114);
             color: white;
-            padding: 2rem;
+            padding: 1rem;
             text-align: center;
             width: 100%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -30,6 +30,7 @@ body {
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+            color: white;
         }
         .container {
             max-width: 800px;
@@ -78,7 +79,7 @@ body {
 .subpage-header {
     background-color: rgb(22, 34, 114); /* Main color from your style.css */
     padding: 12px 20px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%; /* Ensure it spans full width like the main header */
