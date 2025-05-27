@@ -5,15 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide de Blindage RJ45</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            width: 80%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 1.5em;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #e9e9e9;
+        }
+        tr:nth-child(even) {background-color: #f9f9f9;}
+        .note {
+            color: #d9534f;
+            font-weight: bold;
+            background-color: #fcf8e3;
+            border: 1px solid #faebcc;
+            padding: 10px;
+            border-radius: 4px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Passmandoc</h1>
     </header>
-    <div class="container">
-        <h2>Guide de Blindage des Câbles RJ45</h2>
+    <div class="subpage-header">
+        <a href="index.html">⬅️ Retour au menu principal</a>
+    </div>
+    
+    <div class="card">
+        <h1>📋 Guide de Blindage des Câbles RJ45</h1>
 
-        <h3>1. Avant de choisir : comprendre la nomenclature</h3>
+        <h2>🔤 1. Avant de choisir : comprendre la nomenclature</h2>
         <p>Le marquage [première lettre]/[seconde lettre] TP normalisé par l'ISO/IEC 11801 décrit deux niveaux de protection :</p>
         <ul>
             <li><strong>U</strong> = Unshielded (aucun blindage)</li>
@@ -23,16 +74,16 @@
         </ul>
         <p>La lettre avant la barre indique le blindage global, celle après la barre le blindage par paire. Plus il y a de lettres "F/S", plus la résistance aux perturbations électromagnétiques (EMI/RFI) et au diaphonie est élevée.</p>
 
-        <h3>2. Quand le blindage est-il utile ?</h3>
+        <h2>⚡ 2. Quand le blindage est-il utile ?</h2>
         <ul>
-            <li>Environnements bruyants : moteurs, néons, variateurs, onduleurs, antennes RF.</li>
-            <li>Liaisons 10 Gb/s et + regroupées en nappes (risque de "alien crosstalk").</li>
-            <li>PoE haute puissance (PoE++, 60–90 W) : le blindage sert de dissipateur et de conducteur de retour.</li>
-            <li>Chemins mixtes énergie/données, ou câble extérieur enterré.</li>
+            <li>🏭 Environnements bruyants : moteurs, néons, variateurs, onduleurs, antennes RF.</li>
+            <li>🔌 Liaisons 10 Gb/s et + regroupées en nappes (risque de "alien crosstalk").</li>
+            <li>⚡ PoE haute puissance (PoE++, 60–90 W) : le blindage sert de dissipateur et de conducteur de retour.</li>
+            <li>🔄 Chemins mixtes énergie/données, ou câble extérieur enterré.</li>
         </ul>
         <p>À l'inverse, un bureau ou un logement avec des goulottes PVC séparées du 230 V se contente souvent d'un câble non blindé.</p>
 
-        <h3>3. Guide pratique des types de câbles RJ45 blindés</h3>
+        <h2>🛡️ 3. Guide pratique des types de câbles RJ45 blindés</h2>
         <table>
             <thead>
                 <tr>
@@ -71,7 +122,7 @@
                     <td>U/FTP</td>
                     <td>Feuillard sur chaque paire</td>
                     <td>★★★☆</td>
-                    <td>Datacenters Cat 6A 10 Gb/s ; faisceaux denses (réduction de l'alien crosstalk") ; PoE++ jusqu'à 90 W. Plus flexible que F/UTP.</td>
+                    <td>Datacenters Cat 6A 10 Gb/s ; faisceaux denses (réduction de l'"alien crosstalk") ; PoE++ jusqu'à 90 W. Plus flexible que F/UTP.</td>
                 </tr>
                 <tr>
                     <td>F/FTP</td>
@@ -93,18 +144,18 @@
                 </tr>
             </tbody>
         </table>
-        <p>*★ = faible, ★★★★★ = très élevée.</p>
+        <p class="note">*★ = faible, ★★★★★ = très élevée.</p>
 
-        <h3>4. Conseils de mise en œuvre</h3>
-        <ul>
-            <li><strong>Mise à la terre :</strong> le blindage n'est efficace que s'il est continuellement relié à un connecteur RJ45 métallique, puis à la terre du panneau/baie.</li>
-            <li><strong>Boucles de masse :</strong> dans les bâtiments avec plusieurs tableaux, relier le blindage à un seul côté ou utiliser un câble avec drain séparé pour éviter les courants de boucle.</li>
-            <li><strong>Rayon de courbure & tirage :</strong> plus il y a de métal, plus le câble est raide. Utilisez du lubrifiant ou agrandissez les conduits pour F/FTP, S/FTP et supérieurs.</li>
-            <li><strong>Extérieur :</strong> ajoutez une gaine PE, une armure ou du gel hydrofuge ; le blindage seul ne protège ni du soleil ni de l'humidité.</li>
-            <li><strong>PoE :</strong> au-delà de 30 W, préférez un câble à blindage continu (au minimum F/UTP) pour la dissipation thermique et la compatibilité CEM.</li>
+        <h2>🔧 4. Conseils de mise en œuvre</h2>
+        <ul class="implementation-tips">
+            <li><strong>🔌 Mise à la terre :</strong> le blindage n'est efficace que s'il est continuellement relié à un connecteur RJ45 métallique, puis à la terre du panneau/baie.</li>
+            <li><strong>⚠️ Boucles de masse :</strong> dans les bâtiments avec plusieurs tableaux, relier le blindage à un seul côté ou utiliser un câble avec drain séparé pour éviter les courants de boucle.</li>
+            <li><strong>↪️ Rayon de courbure & tirage :</strong> plus il y a de métal, plus le câble est raide. Utilisez du lubrifiant ou agrandissez les conduits pour F/FTP, S/FTP et supérieurs.</li>
+            <li><strong>🌦️ Extérieur :</strong> ajoutez une gaine PE, une armure ou du gel hydrofuge ; le blindage seul ne protège ni du soleil ni de l'humidité.</li>
+            <li><strong>⚡ PoE :</strong> au-delà de 30 W, préférez un câble à blindage continu (au minimum F/UTP) pour la dissipation thermique et la compatibilité CEM.</li>
         </ul>
 
-        <h3>5. Raccourci décisionnel</h3>
+        <h2>🧩 5. Raccourci décisionnel</h2>
         <table>
             <thead>
                 <tr>
@@ -114,32 +165,32 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Appartement ou maison, chemins séparés, ≤ 1 Gb/s</td>
+                    <td>🏠 Appartement ou maison, chemins séparés, ≤ 1 Gb/s</td>
                     <td>U/UTP</td>
                 </tr>
                 <tr>
-                    <td>Logement rénové, goulotte partagée avec 230 V</td>
+                    <td>🔌 Logement rénové, goulotte partagée avec 230 V</td>
                     <td>F/UTP</td>
                 </tr>
                 <tr>
-                    <td>Bureau open-space 10 Gb/s, baies très denses</td>
+                    <td>🏢 Bureau open-space 10 Gb/s, baies très denses</td>
                     <td>U/FTP</td>
                 </tr>
                 <tr>
-                    <td>Atelier avec moteurs et onduleurs</td>
+                    <td>🏭 Atelier avec moteurs et onduleurs</td>
                     <td>S/UTP ou F/FTP</td>
                 </tr>
                 <tr>
-                    <td>Usine lourde, hôpital IRM, data-center 25/40 Gb/s</td>
+                    <td>🏥 Usine lourde, hôpital IRM, data-center 25/40 Gb/s</td>
                     <td>S/FTP</td>
                 </tr>
                 <tr>
-                    <td>Sous-station, studio TV, radar</td>
+                    <td>📡 Sous-station, studio TV, radar</td>
                     <td>SF/FTP</td>
                 </tr>
             </tbody>
         </table>
-        <p>En appliquant ces repères, vous sélectionnerez le type de câble blindé offrant le meilleur compromis coût/performance pour chaque installation.</p>
+        <p class="conclusion">En appliquant ces repères, vous sélectionnerez le type de câble blindé offrant le meilleur compromis coût/performance pour chaque installation.</p>
     </div>
     <footer>
         <p>&copy; 2025 Passmandoc. All rights reserved.</p>

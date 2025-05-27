@@ -38,7 +38,7 @@ body {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            text-align: center;
+            text-align: left;
         }
         h2 {
             color: rgb(22, 34, 114);
@@ -126,4 +126,42 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #f1f1f1;
+}
+
+/* Article formatting improvements */
+.container h3 {
+    color: rgb(22, 34, 114);
+    border-bottom: 2px solid rgb(22, 34, 114);
+    padding-bottom: 8px;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+.container ul {
+    list-style: disc; /* Restore bullet points for article lists */
+    padding-left: 2rem;
+}
+
+.container ul.implementation-tips li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.container p {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.conclusion {
+    font-weight: 500;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 2rem;
 } 
